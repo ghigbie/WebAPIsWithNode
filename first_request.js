@@ -5,8 +5,8 @@ request('https://query.yahooapis.com/v1/public/yql?q=select%20astronomy.sunset%2
         console.log(typeof body);
         console.log("*********");
         var parsedBody = JSON.parse(body);
-        console.log(parsedBody.query.results.channel.astronomy.sunset);
-        console.log(parsedBody["query"]["results"]["channel"]["astronomy"]["sunset"]);
+        console.log("Sunset in Maui is at " + parsedBody.query.results.channel.astronomy.sunset + " - dot notation");
+        console.log("Sunset in Maui is at " + parsedBody["query"]["results"]["channel"]["astronomy"]["sunset"] + " - object literal");
        // console.log(body.query.results.channel.astronomy.sunset);
     }
 });
